@@ -120,5 +120,13 @@
 		<script src="register-sw.js"></script>
 		<script src="search.js"></script>
 		<script src="index.js"></script>
+		<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/uv/sw.js')
+    .then(reg => console.log('SW registered'))
+    .catch(err => console.log('SW failed', err));
+}
+         </script>
+
 	</body>
 </html>
